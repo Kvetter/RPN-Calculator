@@ -38,6 +38,10 @@ public class ArrayStack<T> implements Iterable<T> {
         return data.length;
     }
 
+    public int getTop(){
+        return top;
+    }
+    
     public T pop() {
         top--;
         T result = data[top];

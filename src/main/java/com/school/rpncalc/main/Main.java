@@ -45,7 +45,8 @@ public class Main {
             //checking to see if there are any calculations that needs to be done
             while (!mathToDO.isEmpty()) {
                 // we need atleast 2 numbers in the stack to perform a calculation
-                if (stack.length() > 1) {
+                if (stack.getTop() > 1) {
+                    System.out.println("length: " + stack.length());
                     switch ((String) mathToDO.pop()) {
                         case "+":
                             stack.push((int) stack.pop() + (int) stack.pop());
@@ -62,6 +63,7 @@ public class Main {
                     }
                 } else {
                     System.out.println("Too few numbers to calculate");
+                    break;
                 }
             }
             System.out.println("Numbers in stack: ");
